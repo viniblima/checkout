@@ -1,0 +1,153 @@
+<ion-header>
+    <ion-navbar color="color1">
+    <ion-title><span text-color="color">Confirmação de Serviço</span></ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content [ngStyle]="{'background-image':'url('+imageUrl+')'}">
+  <form>
+    <ion-item style = "background-color:#373737">
+      <ion-label style="color: #FEB81C">
+        <b>
+          Área:
+        </b>        
+      </ion-label>
+      <ion-label style="color: #FEB81C">
+        {{servico.nome}}
+      </ion-label>
+    </ion-item>
+
+    <ion-item style = "background-color:#373737">
+      <ion-label style="color: #FEB81C">
+        <b>
+          Especificação:
+        </b>
+      </ion-label>
+      <ion-label style="color: #FEB81C">
+        {{pedido.area.nome}}  
+      </ion-label>
+    </ion-item>
+
+    <ion-item style = "background-color:#373737">
+      <ion-label style="color: #FEB81C">
+        <b>
+          Título:
+        </b>
+      </ion-label>
+    </ion-item>
+
+    <ion-item style = "background-color:#373737"> 
+      <ion-input type="text" [(ngModel)] = "pedido.titulo" name = "titulo" placeholder="(Insira um título para este serviço)" style="color: white"></ion-input>
+    </ion-item>
+    
+    <br/><br/>
+
+    <ion-item style = "background-color:#373737">
+      <ion-label style="color: #FEB81C">
+        <b>
+          Descrição:
+        </b>      
+      </ion-label>
+    </ion-item>
+
+    <ion-item style = "background-color:#373737"> 
+      <ion-input type="text" [(ngModel)] = "pedido.descricao" name = "descricao" placeholder="(Descreva o que precisa em poucas palavras)" style="color: white" class = "placeholder-text"></ion-input>
+    </ion-item>
+
+    <br/><br/>
+
+    <ion-item style = "background-color:#373737">
+      <ion-label style="color: #FEB81C">
+        <b>
+          Cidade:
+        </b>      
+      </ion-label>
+    </ion-item>
+
+    <ion-item style = "background-color:#373737"> 
+      <ion-input type="text" [(ngModel)] = "pedido.cidade" name = "cidade" placeholder="(Cidade)" style="color: white" class = "placeholder-text"></ion-input>
+    </ion-item>
+
+    <br/><br/>
+
+    <ion-item style = "background-color:#373737">
+      <ion-label style="color: #FEB81C" ><b>Estado</b></ion-label>
+      <ion-select [(ngModel)]='pedido.estado' name = 'estado'>
+      <ion-option value ='AC'  name = 'estado'>AC</ion-option>
+      <ion-option value ='AL'  name = 'estado'>AL</ion-option>
+      <ion-option value ='AM'  name = 'estado'>AM</ion-option>
+      <ion-option value ='AP'  name = 'estado'>AP</ion-option>
+      <ion-option value ='BH'  name = 'estado'>BH</ion-option>
+      <ion-option value ='CE'  name = 'estado'>CE</ion-option>
+      <ion-option value ='DF'  name = 'estado'>DF</ion-option>
+      <ion-option value ='ES'  name = 'estado'>ES</ion-option>
+      <ion-option value ='GO'  name = 'estado'>GO</ion-option>
+      <ion-option value ='MA'  name = 'estado'>MA</ion-option>
+      <ion-option value ='MG'  name = 'estado'>MG</ion-option>
+      <ion-option value ='MS'  name = 'estado'>MS</ion-option>
+      <ion-option value ='MT'  name = 'estado'>MT</ion-option>
+      <ion-option value ='PA'  name = 'estado'>PA</ion-option>
+      <ion-option value ='PB'  name = 'estado'>PB</ion-option>
+      <ion-option value ='PE'  name = 'estado'>PE</ion-option>
+      <ion-option value ='PI'  name = 'estado'>PI</ion-option>
+      <ion-option value ='RJ'  name = 'estado'>RJ</ion-option>
+      <ion-option value ='RN'  name = 'estado'>RN</ion-option>
+      <ion-option value ='RO'  name = 'estado'>RO</ion-option>
+      <ion-option value ='RR'  name = 'estado'>RR</ion-option>
+      <ion-option value ='RS'  name = 'estado'>RS</ion-option>      
+      <ion-option value ='SC'  name = 'estado'>SC</ion-option>
+      <ion-option value ='SE'  name = 'estado'>SE</ion-option>
+      <ion-option value ='SP'  name = 'estado'>SP</ion-option>
+      <ion-option value ='TO'  name = 'estado'>TO</ion-option>
+    </ion-select>
+    </ion-item>
+
+    <br/><br/>
+
+    <ion-item style = "background-color:#373737">
+      <ion-label style="color: #FEB81C">
+        <b>
+          Endereço:
+        </b>      
+      </ion-label>
+    </ion-item>
+
+    <ion-item style = "background-color:#373737"> 
+      <ion-input type="text" [(ngModel)] = "pedido.endereco" name = "endereco" placeholder="(Endereço)" style="color: white" class = "placeholder-text"></ion-input>
+    </ion-item>
+
+    <ion-item style = "background-color:#373737">
+      <ion-label style="color: #FEB81C">
+        <b>
+          Número:
+        </b>      
+      </ion-label>
+    </ion-item>
+
+    <ion-item style = "background-color:#373737"> 
+      <ion-input type="tel" [(ngModel)] = "pedido.numero" name = "numero" placeholder="(Número)" style="color: white" class = "placeholder-text"></ion-input>
+    </ion-item>
+
+    <br/><br/>
+
+    <ion-item style = "background-color:#373737">
+      <ion-label style="color: #FEB81C">
+        <b>
+          Contato:
+        </b>      
+      </ion-label>
+    </ion-item>
+
+    <ion-item style = "background-color:#373737"> 
+      <ion-input type="tel" [(ngModel)] = "pedido.telefone" name = "telefone" placeholder="(Telefone, Whatsapp)" style="color: white" class = "placeholder-text"></ion-input>
+    </ion-item>
+
+    <br/><br/>
+
+
+    <button id="cadastro-button3" (click) = "submit()" ion-button color="light" block>
+      Requisitar avaliação!
+    </button>
+  </form>
+</ion-content>

@@ -1,0 +1,47 @@
+<ion-header>
+
+  <ion-navbar color="color1">
+    <ion-title><span text-color="color">Descrição do pedido</span></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content [ngStyle]="{'background-image':'url('+imageUrl+')'}">
+  <tbody>
+    <tr>
+    <td>Título:</td>
+    <td>{{pedido.titulo}}<br/></td>
+    </tr>
+    
+    <tr>
+    <td>Descrição:</td>
+    <td>{{pedido.descricao}}</td>
+    </tr>
+
+    <tr>
+    <td>Área:</td>
+    <td>{{pedido.servico}}</td>
+    </tr>
+
+    <tr>
+    <td>Serviço:</td>
+    <td>{{pedido.area}}</td>
+    </tr>
+
+    <tr>
+    <td>Status:</td>
+    <td>{{pedido.status}}</td>
+    </tr>
+
+    <tr>
+    <td>Valor:</td>
+    <td>R$ {{pedido.valor}}</td>
+    </tr>
+
+  </tbody>
+  <button id="login-button1" (click)="submit(pedido)" ion-button color="light" block>
+    Efetuar pagamento
+  </button>
+  
+</ion-content>

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar color="color1">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title >
+    <span text-color="color">
+      Serviços
+    </span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content [ngStyle]="{'background-image':'url('+imageUrl+')'}">
+  <ion-card *ngFor='let servico of servico' id="">
+    <ion-list>
+      <div style="width:100%;height:260px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">
+        <img src = "{{servico.imgurl}}" (click) = "seleciona(servico)"/>
+      </div>
+      <ion-item color="assertive" (click) = "seleciona(servico)" id="restaurantes-list-item8" style="color:#FEB81C;background-color:#373737;">
+        <strong>{{servico.nome}}</strong>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  
+</ion-content>

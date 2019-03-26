@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-navbar color="color1">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+    <span text-color="color">
+      Pedidos
+    </span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content [ngStyle]="{'background-image':'url('+imageUrl+')'}">
+  <h1><label style = 'color:#FEB81C'>{{aviso}}</label></h1>
+  <ion-card *ngFor='let pedido of pedido' >
+      <ion-list id="pedidos-list5">
+          <ion-item color="none" (click)="submit(pedido)" id="pedidos-list-item10" style = "background-color:#373737" class="item-borderless">
+            <ion-icon name="ios-construct-outline" item-left></ion-icon>
+            <h4 style="color: #FEB81C">{{pedido.cidade}}-{{ pedido.estado }}</h4>
+            <h4 style="color: #FEB81C">Número do pedido: {{ pedido.id }}</h4><br/>
+            
+            <h2 style="color: #FEB81C">Status: {{ pedido.status}}</h2>
+            <h2 style="color: #FEB81C">Área {{pedido.area}}</h2>
+            <h2 style="color: #FEB81C">Especificação: {{pedido.servico}}</h2>
+            <h2 style="color: #FEB81C">Título: {{pedido.titulo}}</h2>
+            <h2 style="color: #FEB81C">Descrição: {{pedido.descricao}}</h2>
+          </ion-item>
+        </ion-list>
+        
+  </ion-card>
+</ion-content>

@@ -1,0 +1,88 @@
+<ion-header>
+
+    <ion-navbar color="color1">
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title><span text-color="color">Pagamento</span></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding [ngStyle]="{'background-image':'url('+imageUrl+')'}">
+  <ion-item style = "background-color:#373737">
+    <ion-label style = "color: #FEB81C">
+          Nome do proprietário:
+    </ion-label>
+    <ion-input [(ngModel)] = "dados.holderName" name = "name" style = "color: #FEB81C"></ion-input>
+  </ion-item>
+
+  <ion-item style = "background-color:#373737">
+    <ion-label style = "color: #FEB81C">
+        CPF(proprietário):
+    </ion-label>
+  <ion-input [(ngModel)] = "dados.holderCPF" name = "cpf" style = "color: #FEB81C"></ion-input>
+  </ion-item>
+
+  <ion-item style = "background-color:#373737">
+    <ion-label style = "color: #FEB81C">
+      Data de nascimento (proprietário):
+    </ion-label>
+    <ion-input [(ngModel)] = "dados.holderBirthDate" name = "birthdate" maxlength='10' style = "color: #FEB81C"></ion-input>
+  </ion-item>
+
+  <ion-item style = "background-color:#373737">
+    <ion-label style = "color: #FEB81C">
+      DDD:
+    </ion-label>
+    <ion-input [(ngModel)] = "dados.holderAreaCode" name = "ddd" maxlength='2' style = "color: #FEB81C"></ion-input>
+  </ion-item>
+
+  <ion-item style = "background-color:#373737">
+    <ion-label style = "color: #FEB81C">
+        Telefone:
+    </ion-label>
+    <ion-input [(ngModel)] = "dados.holderPhone" name = "telefone" maxlength='9' style = "color: #FEB81C"></ion-input>
+  </ion-item>
+
+  <ion-item style = "background-color:#373737">
+    <ion-label style = "color: #FEB81C">
+        Numero do Cartao:
+    </ion-label>
+      <ion-input [(ngModel)] = "dados.numCartao" name = "numCartao" maxlength='16' style = "color: #FEB81C"></ion-input> 
+  </ion-item>
+
+  <ion-item style = "background-color:#373737">
+    <ion-label style = "color: #FEB81C">
+        Código de Segurança:
+    </ion-label>
+      <ion-input [(ngModel)] = "dados.numSegCartao" name = "numSegCartao" maxlength='4' style = "color: #FEB81C"></ion-input> 
+  </ion-item>
+
+  <ion-item style = "background-color:#373737">
+    <ion-label style = "color: #FEB81C">
+        Mês de Expiração:
+    </ion-label>
+      <ion-input [(ngModel)] = "dados.expirationMonth" name = "expirationMonth" maxlength='2' style = "color: #FEB81C"></ion-input> 
+  </ion-item>
+
+  <ion-item style = "background-color:#373737">
+    <ion-label style = "color: #FEB81C">
+        Ano de Expiração:
+    </ion-label>
+      <ion-input [(ngModel)] = "dados.expirationYear" name = "expirationYear" maxlength='4' style = "color: #FEB81C"></ion-input> 
+  </ion-item>
+
+  <ion-item style = "background-color:#373737">
+    <ion-label style = "color: #FEB81C">
+        Parcela:
+    </ion-label>
+      <ion-select [(ngModel)] = "dados.parcelaQuantidade" name = 'parcelaQuantidade' style = "color: #FEB81C">
+        <ion-option [value] = "1">1 X de R$ {{pedido.valor}}</ion-option>
+        <ion-option [value] = "2">2 X de R$ {{valorParcela}}</ion-option>
+      </ion-select>
+  </ion-item>
+    
+  <button (click) = "teste()" ion-button color="light" block>Efetuar pagamento</button>
+    
+</ion-content>

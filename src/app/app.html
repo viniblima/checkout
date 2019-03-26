@@ -1,1 +1,38 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="mainContent">
+  <ion-header >
+    <ion-toolbar color="color1">
+      <ion-title>
+      <span style="color:#FEB81C;">
+        Menu
+      </span>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content id="side-menu21" style="background-color:#373737;">
+    <ion-list id="menu-list1">
+      <ion-item color="assertive" menuClose="" on-click="goToServicos()" id="menu-list-item1" style="background-color:#373737;color:#FEB81C;" >
+        <ion-icon name="ios-construct" item-left></ion-icon>
+
+        <span text-color="color">Serviços</span>
+      </ion-item>
+      <ion-item color="assertive" menuClose="" on-click="goToLogin()" id="menu-list-item2" style="background-color:#373737;color:#FEB81C;">
+        <ion-icon name="md-finger-print" item-left></ion-icon>
+        Minha Conta
+      </ion-item>
+      <ion-item color="assertive" menuClose="" on-click="goToHistorico()" id="menu-list-item3" style="background-color:#373737;color:#FEB81C;">
+        <ion-icon name="ios-clipboard" item-left></ion-icon>
+        Pedidos
+      </ion-item>
+      <ion-item color="assertive" menuClose="" on-click="goToSobre()" id="menu-list-item4" style="background-color:#373737;color:#FEB81C;">
+        <ion-icon name="md-help-circle" item-left></ion-icon>
+        Sobre
+      </ion-item>
+      <ion-item color="assertive" menuClose="" on-click="goToAjuda()" id="menu-list-item5" style="background-color:#373737;color:#FEB81C;">
+        <ion-icon name="md-hand" item-left></ion-icon>
+        Ajuda
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #mainContent [root]="rootPage" persistent=“true”></ion-nav>

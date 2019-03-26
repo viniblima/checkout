@@ -1,0 +1,21 @@
+<ion-header>
+
+    <ion-navbar color="color1">
+    <ion-title><span text-color="color">Atribuir valor</span></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content [ngStyle]="{'background-image':'url('+imageUrl+')'}">
+  <ion-item style = "background-color:rgb(0, 128, 255)">
+    <ion-label style = "color: white">
+      Valor:
+    </ion-label>
+    <ion-input type="texte" [(ngModel)] = "pedido.valor" name = "valor" placeholder="" style = "color: white"></ion-input>
+  </ion-item>
+
+<button id="cadastro-button3" (click) = "submit()" ion-button color="stable" block>
+  Atribuir valor!
+</button>
+</ion-content>
